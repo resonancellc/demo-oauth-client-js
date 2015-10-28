@@ -39,13 +39,7 @@ var app = {
     },
     
     parseAccessCode: function(){
-        var qp = null;
-        if (window.location.hash) {
-            qp = location.hash.substring(1);
-        }
-        else {
-            qp = location.search.substring(1);
-        }
+        var qp = location.search.substring(1);
         
         qp = qp ? JSON.parse('{"' + qp.replace(/&/g, '","').replace(/=/g, '":"') + '"}',
                 function (key, value) {
