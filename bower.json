@@ -1,0 +1,9 @@
+{
+    "name": "demo-oauth-client-js",
+    "description": "Demo oauth client",
+    "version": "1.0.0",
+    "dependencies": {
+        "bootstrap": "~3",
+        "toastr": "*"
+    }
+}
