@@ -1,7 +1,9 @@
 var app = {
     config: {},
     login: function(){
-        var url = this.config.urlAuthorize + '?response_type=' + this.config.responseType;
+        var url = this.config.urlAuthorize;
+        url += (url.indexOf('?') >= 0)? '&':'?';
+        url += 'response_type=' + this.config.responseType;
         url += '&redirect_uri=' + encodeURIComponent(this.config.redirectUri);
         url += '&client_id=' + encodeURIComponent(this.config.clientId);
         url += '&scope=' + encodeURIComponent(this.config.scope);
